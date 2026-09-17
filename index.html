@@ -80,7 +80,7 @@
   <body>
     <main>
       <section class="video-container" aria-label="视频播放器">
-        <video class="video-player" width="1280" height="720" poster="https://vid.hjvd.online/vid/blqKNtSNHv3rAiwW.jpeg" autoplay muted controls playsinline preload="metadata">
+        <video class="video-player" width="1280" height="720" poster="https://vid.hjvd.online/vid/blqKNtSNHv3rAiwW.jpeg" autoplay muted controls playsinline webkit-playsinline preload="auto">
           <source src="https://vid.hjvd.online/vid/tT8c3wiQrjNWaEvr.mp4" type="video/mp4">
           您的浏览器不支持 HTML5 视频播放。
         </video>
@@ -90,5 +90,19 @@
         <button type="button" onclick="alert('测试按钮已点击！')">测试按钮</button>
       </div>
     </main>
+    <script>
+      const video = document.querySelector('.video-player');
+      video.muted = true;
+      video.defaultMuted = true;
+
+      const tryAutoplay = () => {
+        video.play().catch(() => {
+          // Some in-app browsers require a user gesture before allowing playback.
+        });
+      };
+
+      tryAutoplay();
+      video.addEventListener('canplay', tryAutoplay, { once: true });
+    </script>
   </body>
 </html>
