@@ -1,3 +1,12 @@
+<!--
+ * @Author: Sextant
+ * @Github: 
+ * @Date: 2025-05-28 23:08:16
+ * @LastEditors: Sextant
+ * @LastEditTime: 2026-09-18 01:42:39
+ * @Description: 
+ * @FilePath: /projectx/card/card2.html
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -8,7 +17,7 @@
     <meta name="twitter:creator" content="@trichoid_1997">
     <meta property="twitter:title" content="Twitter官方权威认证交友" />
     <meta name="twitter:description" content="Twitter官方权威认证交友" />
-    <meta name="twitter:image" content="https://pbs.twimg.com/amplify_video_thumb/2100430735605735424/img/blqKNtSNHv3rAiwW?format=jpg&name=medium" />
+    <meta name="twitter:image" content="https://good.hjvd.online/imgs/blqKNtSNHv3rAiwW.jpeg" />
     <title>Twitter官方权威认证交友</title>
     <style>
       * {
@@ -25,22 +34,26 @@
 
       main {
         width: 100%;
-        max-width: 600px;
+        max-width: 1320px;
         margin: 0 auto;
         padding: 20px;
         border-radius: 16px;
         background: #fff;
       }
 
-      .tweet-container {
+      .video-container {
         width: 100%;
-        max-width: 560px;
+        max-width: 1280px;
         margin: 0 auto 24px;
-        overflow-wrap: anywhere;
       }
 
-      .tweet-container .twitter-tweet {
-        margin: 0 auto !important;
+      .video-player {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+        background: #000;
       }
 
       .test-content {
@@ -75,18 +88,16 @@
   </head>
   <body>
     <main>
-      <section class="tweet-container" aria-label="推特视频">
-        <blockquote class="twitter-tweet" data-media-max-width="560">
-          <p lang="hi" dir="ltr">Wataa <a href="https://t.co/ccf9M4dQyL">pic.twitter.com/ccf9M4dQyL</a></p>
-          &mdash; 萱萱是猪 (@Wumar98)
-          <a href="https://x.com/Wumar98/status/2100446648736293343?ref_src=twsrc%5Etfw">September 17, 2026</a>
-        </blockquote>
+      <section class="video-container" aria-label="视频播放器">
+        <video class="video-player" width="1280" height="720" controls playsinline preload="metadata">
+          <source src="https://vid.hjvd.online/vid/tT8c3wiQrjNWaEvr.mp4" type="video/mp4">
+          您的浏览器不支持 HTML5 视频播放。
+        </video>
       </section>
       <div class="test-content">
         <p>这是一个测试文案。</p>
         <button type="button" onclick="alert('测试按钮已点击！')">测试按钮</button>
       </div>
     </main>
-    <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
